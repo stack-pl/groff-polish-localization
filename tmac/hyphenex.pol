@@ -1,0 +1,39 @@
+% This is the groff hyphenation exceptions for Polish.
+%
+% It is based on the TeX pattern file 'plhyph.tex' version 3.0b, 
+% available at https://ctan.org/tex-archive/language/polish.
+%
+% Please check the original file for more details.
+%
+% It has been made suitable for groff by expanding all macros to real
+% characters in latin-2 encoding.
+%
+\hyphenation{
+be-zach
+be-zami
+by-naj-mniej
+gdzie-nie-gdzie
+ina-czej
+na-dal
+ni-gdy
+ni-gdzie
+niech-¿e
+niech-by
+ow-szem
+pó-³ach
+pó-³ami
+pó-³ek
+pod-ów-czas
+przy-naj-mniej
+sk±d-in±d
+tró-jach
+tró-jami
+tró-jek
+}
+
+% Local Variables:
+% mode: tex
+% coding: latin-2
+% fill-column: 72
+% End:
+% vim: set filetype=tex textwidth=72:
