@@ -38,17 +38,17 @@
 .
 .\" Predefined text translations
 .
-.ds \*[locale]-abstract \f[I]STRESZCZENIE\f[]\"              [ms]
+.ds \*[locale]-abstract \f[I]STRESZCZENIE\f[]\"              [mm,ms]
 .ds \*[locale]-app DODATEK\"                                 [mm]
 .ds \*[locale]-appendix_string Dodatek\"                     [me]
 .ds \*[locale]-april kwiecieñ\"                              [me,mm,ms]
 .ds \*[locale]-attribute_string ATTRIBUTE_STRING\"           [mom]
 .ds \*[locale]-august sierpieñ\"                             [me,mm,ms]
-.ds \*[locale]-capcon CAPCON\"                               ?
-.ds \*[locale]-capec Cytat\"                                 ?
-.ds \*[locale]-capex Dokument\"                              ?
-.ds \*[locale]-capfg Rysunek\"                               ?
-.ds \*[locale]-captb Tabela\"                                ?
+.ds \*[locale]-capcon CAPCON\"                               [mm]
+.ds \*[locale]-capec Cytat\"                                 [mm]
+.ds \*[locale]-capex Dokument\"                              [mm]
+.ds \*[locale]-capfg Rysunek\"                               [mm]
+.ds \*[locale]-captb Tabela\"                                [mm]
 .ds \*[locale]-chapter_string Rozdzia³\"                     [me,mom]
 .ds \*[locale]-december grudzieñ\"                           [me,mm,ms]
 .ds \*[locale]-draft_string Brudnopis\"                      [mom]
@@ -64,7 +64,7 @@
 .ds \*[locale]-letapp Zaakceptowano:\"                       [mm]
 .ds \*[locale]-letat Uwaga:\"                                [mm]
 .ds \*[locale]-letcn Poufne\"                                [mm]
-.ds \*[locale]-letdate Dnia\"                                [mm]
+.ds \*[locale]-letdate Data\"                                [mm]
 .ds \*[locale]-letfc Z wyrazami szacunku,\"                  [mm]
 .ds \*[locale]-letns!0 Kopia do\"                            [mm]
 .ds \*[locale]-letns!1 Kopia (oraz za³±cznik) do\"           [mm]
@@ -109,7 +109,7 @@
 .ds \*[locale]-november listopad\"                           [me,mm,ms]
 .ds \*[locale]-october pa¼dziernik\"                         [mm,ms]
 .ds \*[locale]-paper A4\"                                    [mom]
-.ds \*[locale]-qrf Patrz Rozdz. \\*[Qrfh], str. \\[Qrfp].\"  [mm]
+.ds \*[locale]-qrf (zob. rodzia³ \\*[Qrfh], s. \\*[Qrfp])\"  [mm]
 .ds \*[locale]-references Materia³y ¼ród³owe\"               [ms]
 .ds \*[locale]-revision_string Rev.\"                        [mom]
 .ds \*[locale]-rp MATERIA£Y ¬RÓD£OWE\"                       [mm]
@@ -138,9 +138,34 @@
 .
 .
 .\" mm package
-.if d PH \
+.if d PH \{\
 .	ds cov*local-date-format \En[dy] \E*[MO\En[mo]] \En[year]
-.
+.	als cov*mt0-authors \*[locale]-attribute_string
+.	als cov*mt0-date \*[locale]-letdate
+.	ds cov*mt0-subject Temat\"
+.	ds cov*mt0-txt!1 NOTATKA DO AKT\"
+.	ds cov*mt0-txt!2 UWAGI TECHNICZNE\"
+.	ds cov*mt0-txt!3 NOTATKA ADMINISTRACYJNA\"
+.	ds cov*mt0-org Wydz.\"
+.	ds cov*mt0-ext \[hy]\"
+.	ds cov*mt05-charge-case Sygnatura:\"
+.	ds cov*mt05-file-case Sprawa:\"
+.	ds Pg_type!1 OFICJALNA KOPIA
+.	ds Pg_type!2 KOPIA ROBOCZA
+.	ds Pg_type!3 W\ E\ R\ S\ J\ A\ \ \ R\ O\ B\ O\ C\ Z\ A
+.	ds Pg_type!4 W\ E\ R\ S\ J\ A\ \ \ R\ O\ B\ O\ C\ Z\ A
+.	\"Alt version of  mm's GETR: do not use H1dot" 
+.	de GETRND
+.	if \\n[.$]<1 .@error \\$0: expected an argument
+.   ie !r qrf*pass .tm \\$0: no .INITR in this file" \" XXX: .@error?
+.	el \{\
+.		GETHN \\$1 Qrfh
+.		if \\n[H1dot]>0 \
+.			chop Qrfh
+.		GETPN \\$1 Qrfp
+\\*[Qrf]
+.	\}
+..
 .
 .\" Default encoding
 .mso latin2.tmac
@@ -154,9 +179,9 @@
 .nr \*[locale]*hyphenation-mode-trap 2
 .
 .ie \n[locale*use-trap-hyphenation-mode] \
-.  hy \n[\*[locale]*hyphenation-mode-trap]
+.   hy \n[\*[locale]*hyphenation-mode-trap]
 .el \
-.  hy \n[\*[locale]*hyphenation-mode-base]
+.   hy \n[\*[locale]*hyphenation-mode-base]
 .
 .hy
 .
@@ -171,7 +196,6 @@
 .hcode ¶ ¶  ¦ ¶
 .hcode ¼ ¼  ¬ ¼
 .hcode ¿ ¿  ¯ ¿
-.hcode \[u01B6] ¿  \[u01B5] ¿
 .
 .hla pl
 .hpf hyphen.pol
