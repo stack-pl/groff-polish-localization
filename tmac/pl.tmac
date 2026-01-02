@@ -1,6 +1,6 @@
 .\" Polish localization for groff
 .\"
-.\" Copyright (C) 2025 Free Software Foundation, Inc.
+.\" Copyright (C) 2026 Free Software Foundation, Inc.
 .\"   Written by Dariusz Chilimoniuk <darek@stack.pl>
 .\"
 .\" This file is part of groff.
@@ -42,9 +42,9 @@
 .ds \*[locale]-app DODATEK\"                                 [mm]
 .ds \*[locale]-appendix_string Dodatek\"                     [me]
 .ds \*[locale]-april kwiecieñ\"                              [me,mm,ms]
-.ds \*[locale]-attribute_string ATTRIBUTE_STRING\"           [mom]
+.ds \*[locale]-attribute_string autorstwa\"                  [mom]
 .ds \*[locale]-august sierpieñ\"                             [me,mm,ms]
-.ds \*[locale]-capcon CAPCON\"                               [mm]
+.ds \*[locale]-capcon SPIS TRE¦CI\"                          [mm]
 .ds \*[locale]-capec Cytat\"                                 [mm]
 .ds \*[locale]-capex Dokument\"                              [mm]
 .ds \*[locale]-capfg Rysunek\"                               [mm]
@@ -52,7 +52,7 @@
 .ds \*[locale]-chapter_string Rozdzia³\"                     [me,mom]
 .ds \*[locale]-december grudzieñ\"                           [me,mm,ms]
 .ds \*[locale]-draft_string Brudnopis\"                      [mom]
-.ds \*[locale]-endnote_string ENDNOTE_STRING\"               [mom]
+.ds \*[locale]-endnote_string PRZYPISY\"                     [mom]
 .ds \*[locale]-february luty\"                               [mm,ms]
 .ds \*[locale]-finis_string KONIEC\"                         [mom]
 .ds \*[locale]-friday pi±tek\"                               [me]
@@ -109,9 +109,9 @@
 .ds \*[locale]-november listopad\"                           [me,mm,ms]
 .ds \*[locale]-october pa¼dziernik\"                         [mm,ms]
 .ds \*[locale]-paper A4\"                                    [mom]
-.ds \*[locale]-qrf (zob. rodzia³ \\*[Qrfh], s. \\*[Qrfp])\"  [mm]
+.ds \*[locale]-qrf (zob. rozdzia³ \\*[Qrfh], s. \\*[Qrfp])\" [mm]
 .ds \*[locale]-references Materia³y ¼ród³owe\"               [ms]
-.ds \*[locale]-revision_string Rev.\"                        [mom]
+.ds \*[locale]-revision_string Rewizja\"                     [mom]
 .ds \*[locale]-rp MATERIA£Y ¬RÓD£OWE\"                       [mm]
 .ds \*[locale]-saturday sobota\"                             [me,mm]
 .ds \*[locale]-september wrzesieñ\"                          [mm]
@@ -145,7 +145,7 @@
 .	ds cov*mt0-subject Temat\"
 .	ds cov*mt0-txt!1 NOTATKA DO AKT\"
 .	ds cov*mt0-txt!2 UWAGI TECHNICZNE\"
-.	ds cov*mt0-txt!3 NOTATKA ADMINISTRACYJNA\"
+.	ds cov*mt0-txt!3 ZALECENIA ADMINISTRACYJNE\"
 .	ds cov*mt0-org Wydz.\"
 .	ds cov*mt0-ext \[hy]\"
 .	ds cov*mt05-charge-case Sygnatura:\"
@@ -154,7 +154,7 @@
 .	ds Pg_type!2 KOPIA ROBOCZA
 .	ds Pg_type!3 W\ E\ R\ S\ J\ A\ \ \ R\ O\ B\ O\ C\ Z\ A
 .	ds Pg_type!4 W\ E\ R\ S\ J\ A\ \ \ R\ O\ B\ O\ C\ Z\ A
-.	\"Alt version of  mm's GETR: do not use H1dot" 
+.	\"Alt version of mm's GETR that removes a period just after chapter" 
 .	de GETRND
 .	if \\n[.$]<1 .@error \\$0: expected an argument
 .   ie !r qrf*pass .tm \\$0: no .INITR in this file" \" XXX: .@error?
@@ -174,7 +174,7 @@
 .
 .\" Set up hyphenation.
 .
-.\" Polish hyphenation (\lefthyphenmin=2, \righthyphenmin=2)
+.\" Polish hyphenation (\lefthyphenmin=2, \righthyphenmin=3)
 .nr \*[locale]*hyphenation-mode-base 1
 .nr \*[locale]*hyphenation-mode-trap 2
 .
