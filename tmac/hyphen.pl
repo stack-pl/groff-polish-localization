@@ -1,53 +1,79 @@
-% This is the groff hyphenation patterns for Polish.
+% title: Hyphenation patterns for Polish
+% copyright: Copyright (C) 1987-1995 Hanna Ko³odziejska, Bogus³aw Jackowski, Marek Ryæko
+% notice: This file is part of the hyph-utf8 package.
+%     See http://www.hyphenation.org/tex for more information.
+% language:
+%     name: Polish
+%     tag: pl
+% version: 3.0a, Wednesday, May 17th, 1995
+% authors:
+%   -
+%     name: Hanna Ko³odziejska
+%   -
+%     name: Bogus³aw Jackowski
+%     contact: b_jackowski (at) gust.org.pl
+%   -
+%     name: Marek Ryæko
+%     contact: marek (at) do.com.pl
+% licence:
+%     - This file is made available under any of the following licences:
+%     -
+%         name: MIT
+%         url: https://opensource.org/licenses/MIT
+%         text: >
+%             Permission is hereby granted, free of charge, to any person
+%             obtaining a copy of this software and associated documentation
+%             files (the ``Software''), to deal in the Software without
+%             restriction, including without limitation the rights to use,
+%             copy, modify, merge, publish, distribute, sublicense, and/or sell
+%             copies of the Software, and to permit persons to whom the
+%             Software is furnished to do so, subject to the following
+%             conditions:
 %
-% It is based on the TeX pattern file 'plhyph.tex' version 3.0b, 
-% available at https://ctan.org/tex-archive/language/polish.
+%             The above copyright notice and this permission notice shall be
+%             included in all copies or substantial portions of the Software.
 %
-% Here is the copyright message from 'plhyph.tex' file:
-% ====================================================================
-% This is PLHYPH.TeX - the Polish hyphenation patterns
-%          version 3.0a, Wednesday, May 17th, 1995
-%          version 3.0b, Monday, March 30th, 2020 (licence info corrected,
-%          comments UTF-8 encoded)
-% to be used for the inclusion of Polish hyphenation patterns in any format,
-% not necessarily in the MeX or LaMeX ones. The patterns are exactly
-% the same as in the version 3.0 being the part of the MeX package,
-% only the surrounding of the \pattern command is changed. The authors
-% claim the upward compatibility, i.e., the version 3.0a can also be used
-% with the MeX or LaMeX formats.
+%             THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND,
+%             EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+%             OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+%             NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+%             HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+%             WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+%             FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+%             OTHER DEALINGS IN THE SOFTWARE.
+%     - text: >
+%         This macro file belongs to the public domain
+%         under the conditions specified by the author of TeX:
 %
-% The history of development of the Polish hyphenation patterns:
+%           ``Macro files like PLAIN.TEX should not be changed in any way,
+%             except with respect to preloaded fonts,
+%             unless the changes are authorized by the authors of the macros.''
 %
-% The first version of the patterns was developed
-% by Hanna Ko³odziejska (1987).
-%
-% The adaptation to the LeX format (see below) and extensive modification
-% were done by Bogus³aw Jackowski & Marek Ryæko (1987?1989).
-%
-% The hyphenation rules were further improved and adapted to the
-% TeX 3.x requirements by Hanna Ko³odziejska (1991).
-%
-% Lone-standing version (3.0a) of patterns was prepared (under pressure
-% from LaTeX users) by Bogus³aw Jackowski and Marek Ryæko, following
-% Mariusz Olko's suggestions, 1995.
-%
-% The LeX format mentioned above was the first version of the adaptation
-% of TeX to the Polish language. The next version is called MeX.
-%
-% This macro file belongs to the public domain
-% under the conditions specified by the author of TeX:
-%
-%    ?Macro files like PLAIN.TEX should not be changed in any way,
-%     except with respect to preloaded fonts,
-%     unless the changes are authorized by the authors of the macros.?
-%
-%                                           Donald E. Knuth
-%
-% ====================================================================
-% Please check the original file for more details.
-%
-% It has been made suitable for groff by expanding all macros to real
-% characters in latin-2 encoding.
+%                                                   Donald E. Knuth
+% hyphenmins:
+%     typesetting:
+%         left: 2
+%         right: 2
+% changes:
+%     - The first version of the patterns was developed
+%           by Hanna Ko³odziejska (1987).
+%     - The adaptation to the LeX format (see below) and extensive modification
+%           were done by Bogus³aw Jackowski & Marek Ryæko (1987--1989).
+%     - The hyphenation rules were further improved and adapted to the
+%           TeX 3.x requirements by Hanna Ko³odziejska (1991).
+%     - Lone-standing version (3.0a) of patterns was prepared (under pressure
+%           from LaTeX users) by Bogus³aw Jackowski and Marek Ryæko, following
+%           Mariusz Olko's suggestions, 1995.
+%     - The LeX format mentioned above was the first version of the adaptation
+%           of TeX to the Polish language. The next version is called MeX.
+% texlive:
+%     encoding: qx
+%     babelname: polish
+%     legacy_patterns: plhyph.tex
+%     message: Polish hyphenation patterns
+%     description: |-
+%         Hyphenation patterns for Polish in QX and UTF-8 encodings.
+%         These patterns are also used by Polish TeX formats MeX and LaMeX.
 %
 \patterns{
 .ææ8
@@ -4104,10 +4130,32 @@ yo2
 yu2
 ze4p3p
 }
+\hyphenation{
+be-zach
+be-zami
+by-naj-mniej
+gdzie-nie-gdzie
+ina-czej
+na-dal
+ni-gdy
+ni-gdzie
+niech-¿e
+niech-by
+ow-szem
+pó-³ach
+pó-³ami
+pó-³ek
+pod-ów-czas
+przy-naj-mniej
+sk±d-in±d
+tró-jach
+tró-jami
+tró-jek
+}
 
 % Local Variables:
 % mode: tex
 % coding: latin-2
 % fill-column: 72
 % End:
-% vim: set filetype=tex textwidth=72:
+% vim: set fileencoding=iso-8859-2 filetype=tex textwidth=72:
