@@ -1,13 +1,9 @@
 # groff-polish-localization
-Polish localization files for GNU's groff
+Official Polish localization files for GNU's groff.
 
-## Installation
-Copy all files from 'groff-polish-localization/tmac' directory into 'groff/<X.YY.ZZ>/tmac/'
-(usually groff is located in /usr/share/ folder).
-
-```cd groff-polish-localization```
-
-```sudo cp ./tmac/* /usr/share/groff/1.23.0/tmac/```
+Verify your groff version:
+```groff --version```
+You should get 1.24 or higher. In that release, polish hyphenation rules and macro file has been added.
 
 ## Usage
 Print sweet looking document on your console:
